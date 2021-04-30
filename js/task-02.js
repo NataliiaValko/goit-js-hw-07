@@ -5,8 +5,7 @@ const ingredients = [
   'Помидоры',
   'Зелень',
   'Приправы',
-];
-    
+];    
 const insertItems = (array, id) => {
   const createItems = array => array.map(item => {
         const itemRef = document.createElement('li');
