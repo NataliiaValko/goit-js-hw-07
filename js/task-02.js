@@ -5,15 +5,17 @@ const ingredients = [
   'Помидоры',
   'Зелень',
   'Приправы',
-];    
-const insertItems = (array, id) => {
+];
+const listRef = document.querySelector('#ingredients');
+
+const insertItems = array => {
   const createItems = array => array.map(item => {
         const itemRef = document.createElement('li');
         itemRef.textContent = item;
         return itemRef
   });
 
-  document.querySelector(id).append(...createItems(array));
+  listRef.append(...createItems(array));
 };
 
-insertItems(ingredients, '#ingredients');
+insertItems(ingredients);

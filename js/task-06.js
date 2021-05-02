@@ -1,7 +1,9 @@
 const refs = {
     input: document.querySelector('#validation-input'),
 }
+
 const lengthValue = refs.input.dataset.length;
+
 const onValidationValue = event => {
     refs.input.classList.add('invalid');
     event.currentTarget.value.length === 6

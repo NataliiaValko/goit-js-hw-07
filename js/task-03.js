@@ -15,14 +15,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const listRef = id => document.querySelector(id);
-const insertGallery = (id, position, array) => {
+const listRef = document.querySelector('#gallery');
+
+const insertGallery = (array) => {
   const makeItemsGallery = array =>
         array.map(({ url, alt }) => {return `<li> <img src="${url}" alt="${alt}"> </li>`})
         .join('');
-  listRef(id).insertAdjacentHTML(position, makeItemsGallery(array));
-  listRef(id).classList.add("list", "js-gallery__list");
-  listRef(id).querySelectorAll("li").forEach(item => item.classList.add("js-gallery__item"))
+  listRef.insertAdjacentHTML('afterbegin', makeItemsGallery(array));
+  listRef.classList.add("list", "js-gallery__list");
+  listRef.querySelectorAll("li").forEach(item => item.classList.add("js-gallery__item"))
 };
 
-insertGallery('#gallery', 'afterbegin', images);
+insertGallery(images);
