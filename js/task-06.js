@@ -6,7 +6,7 @@ const lengthValue = refs.input.dataset.length;
 
 const onValidationValue = event => {
     refs.input.classList.add('invalid');
-    event.currentTarget.value.length === 6
+    event.target.value.length === +lengthValue
         ? refs.input.classList.replace('invalid', 'valid')
         : refs.input.classList.replace('valid', 'invalid');
 };
