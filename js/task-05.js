@@ -4,7 +4,10 @@ const refs = {
 };
 
 const onInputEntering = event => {
-    refs.name.textContent = event.currentTarget.value || 'незнакомец';
+    refs.name.textContent =
+        event.currentTarget.value.trim() !== ''
+        ? event.currentTarget.value
+        : 'незнакомец';
 };
 
 refs.input.addEventListener('input', onInputEntering);
