@@ -1,6 +1,6 @@
 const listRef = document.querySelectorAll('.item');
 
-const countCategory = selector => console.log(`В списке ${listRef.length} категории.`);
+const countCategory = () => console.log(`В списке ${listRef.length} категории.`);
 
 const consoleCategoryItems = () => {
     listRef.forEach(item => {
