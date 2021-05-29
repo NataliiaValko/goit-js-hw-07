@@ -16,7 +16,8 @@ const createBoxes = (amount) => {
 
         el.style.width = `${initialWidth + step * i}px`;
         el.style.height = `${initialHeight + step * i}px`;
-        el.style.backgroundColor = '#' + (Math.random().toString(16) + "000000").substring(2,8);
+        el.style.backgroundColor = '#' + (Math.random().toString(16) + "000000").substring(2, 8);
+        console.log(('#' + (Math.random().toString(16) + "000000").substring(2,8)))
         arrayElements.push(el);
     }
     refs.boxes.append(...arrayElements);
